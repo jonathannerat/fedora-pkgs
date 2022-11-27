@@ -5,3 +5,6 @@
 */*.zip
 */*.tar.gz
 */*.src.rpm
+
+# Ignore logs
+**.log

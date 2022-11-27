@@ -1,6 +1,0 @@
-
-setting SOURCE_DATE_EPOCH=1669248000
-error: Failed build dependencies:
-	cxxopts-devel is needed by pamixer-1.6-1.fc37.x86_64
-	meson is needed by pamixer-1.6-1.fc37.x86_64
-	pulseaudio-libs-devel is needed by pamixer-1.6-1.fc37.x86_64
