@@ -1,0 +1,7 @@
+# Ignore RPM build folder
+*/results_*/
+
+# Ignore sources
+*/*.zip
+*/*.tar.gz
+*/*.src.rpm
