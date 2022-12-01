@@ -1,22 +1,16 @@
 Name:           jonathannerat-dmenu
-Version:        5.2.r17.g6f5aba7
-Release:        1%{?dist}
+Version:        5.2.r19.ge582a0b
+Release:        2%{?dist}
 Summary:        dmenu is an efficient dynamic menu for X.
 
 License:        MIT
 URL:            https://github.com/jonathannerat/dmenu
-Source0:        jonathannerat-dmenu-5.2.r17.g6f5aba7.tar.gz
+Source0:        %{name}-%{version}.tar.gz
 
 Provides:       dmenu = %{version}
 Conflicts:      dmenu
 
-BuildRequires:  gcc
-BuildRequires:  make
-BuildRequires:  libX11-devel
-BuildRequires:  libXinerama-devel
-BuildRequires:  fontconfig-devel
-BuildRequires:  libXft-devel
-# Requires:       
+BuildRequires:  gcc, make, libX11-devel, libXinerama-devel, fontconfig-devel, libXft-devel
 
 %description
 %{summary}
@@ -47,5 +41,8 @@ BuildRequires:  libXft-devel
 
 
 %changelog
+* Thu Dec 01 2022 Jonathan Teran <jonathan.nerat@gmail.com> - 5.2.r19.ge582a0b-2
+- Update package version, place BuildRequires in a single line
+
 * Thu Nov 24 2022 Jonathan Teran <jonathan.nerat@gmail.com>
-- 
+- Initial package version
