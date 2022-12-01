@@ -1,11 +1,11 @@
 Name:           pamixer
 Version:        1.6
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Pulseaudio command line mixer
 
 License:        GPL-v3
 URL:            https://github.com/cdemoulins/pamixer
-Source0:        https://github.com/cdemoulins/pamixer/archive/refs/tags/%{version}.tar.gz
+Source0:        %{url}/archive/refs/tags/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
 BuildRequires:  meson cmake
 BuildRequires:  g++
@@ -38,5 +38,8 @@ Also, this project can provide you a small C++ library to control pulseaudio.
 
 
 %changelog
+* Thu Dec 01 2022 Jonathan Teran <jonathan.nerat@gmail.com> - 1.6-2
+- Fix source tarball filename
+
 * Thu Nov 24 2022 Jonathan Teran <jonathan.nerat@gmail.com>
 - Initial version of the package
