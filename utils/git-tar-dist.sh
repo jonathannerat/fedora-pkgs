@@ -10,14 +10,15 @@ fail() {
 }
 
 pkgdir="$1"
+tag="$2"
 [ -d "$pkgdir" ] || fail "Not a directory: $pkgdir"
-git -C status >/dev/null || fail "Not a git repository: $pkgdir"
+git -C "$pkgdir" status >/dev/null || fail "Not a git repository: $pkgdir"
 
 pkg="$(basename "$pkgdir")"
 
 echo "Packaging $pkg"
 # Format git-describe(1) in a version allowed by fedora pkgs
-version="$(git -C "$pkgdir" describe --tags | sed 's/-\([^-]*\)/.r\1/;s/-/./')"
+version="$(git -C "$pkgdir" describe --tags $tag | sed 's/-\([^-]*\)/.r\1/;s/-/./')"
 echo "Version detected: $version"
 
 # "Copy" the directory using worktree to a folder with name "$pkg-$version"
