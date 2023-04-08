@@ -1,6 +1,6 @@
-Name:           dragon
+Name:           dragon-drop
 Version:        1.2.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Drag and drop source/target for X 
 
 License:        GPLv3
@@ -17,7 +17,7 @@ simple drag-and-drop source/sink for X or Wayland
 %global debug_package %{nil}
 
 %prep
-%autosetup
+%setup -q -n dragon-%{version}
 sed -i 's:^PREFIX =.*:PREFIX=/usr:' Makefile
 
 
@@ -35,5 +35,7 @@ sed -i 's:^PREFIX =.*:PREFIX=/usr:' Makefile
 
 
 %changelog
+* Tue Feb 7 2023 Jonathan Teran <jonathan.nerat@gmail.com>
+- Rename package to prevent conflicts with dragon media player
 * Fri Nov 25 2022 Jonathan Teran <jonathan.nerat@gmail.com>
 - Initial package version
